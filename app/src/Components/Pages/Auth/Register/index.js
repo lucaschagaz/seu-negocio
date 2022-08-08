@@ -37,7 +37,9 @@ const Register = () => {
   return (
     <Conteiner customClass="center">
       <div className={styles.register_conteiner}>
-        <h1>Seu<span>Negocio</span></h1>
+        <h1> 
+          Seu <span>Negocio</span>
+        </h1>
         <h2>Crie uma Conta:</h2>
         {erro && <p className={styles.message_register}>{erro}</p>}
         <FormUser handleSubmit={acessRegister} btnText="Registrar"></FormUser>

@@ -30,7 +30,7 @@ server.post('/api/auth/register', (req, res) => {
     const {email, password} = req.body
     if (isAuthenticated({email, password})) {
       const status = 401
-      const message = 'Escolha outro email e senha, estes ja estão sendo ultilizados.'
+      const message = 'Usuario já Cadastrado.'
       res.status(status).json({status, message})
       return
     }
