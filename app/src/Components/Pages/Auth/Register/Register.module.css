@@ -1,0 +1,28 @@
+.register_conteiner{
+    padding: 2em 3.5em;
+    z-index:999;
+    text-align:center;
+    border: 1px solid #fff;
+    background-color: #5b43e0;
+    border-radius: 2px;
+    color:#f1f1f1;
+}
+.register_conteiner h1 span{
+    background-color: #f1f1f1;
+    color:#5b43e0;
+    padding: 0.2em 0.5em ;
+}
+.register_conteiner h2{
+    margin:0.8em 0;
+}
+.message_register{
+    color:#f81212;
+    background-color:#f1f1f1;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+.register_conteiner p a{
+    color:#222;
+    font-size:1.2em;
+    text-decoration:none;
+}

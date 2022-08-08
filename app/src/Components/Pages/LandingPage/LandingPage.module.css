@@ -1,0 +1,25 @@
+.landing_conteiner{
+    flex: 1;
+}
+.landing_conteiner h2,
+.landing_conteiner p{
+    margin-bottom: 0.6em;
+    color: #222;
+    width: 100%;
+}
+.landing_conteiner h1{
+    font-size: 3em;
+    color:#111;
+    margin-bottom: 0.6em;
+}
+.landing_conteiner h1 span{
+    background-color: #301d97;
+    color:#f1f1f1;
+    padding: 0.2em 0.5em ;
+}
+.landing_image{
+   flex: 1;
+}
+.landing_image img{
+    width: 100%;
+}
