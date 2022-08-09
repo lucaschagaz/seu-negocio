@@ -27,12 +27,17 @@ function isAuthenticated({email, password}){
 
 server.post('/api/auth/register', (req, res) => {
 
-    const {email, password} = req.body
-    if (isAuthenticated({email, password})) {
-      const status = 401
-      const message = 'Usuario já Cadastrado.'
-      res.status(status).json({status, message})
-      return
+    const {email, password} = req.body;
+    if(!email || !password){
+        const status = 401
+        const message = 'cadastre um usuario'
+        res.status(status).json({status, message})
+        return
+    }else if (isAuthenticated({email, password})) {
+        const status = 401
+        const message = 'Usuario já Cadastrado.'
+        res.status(status).json({status, message})
+        return
     }
     
     fs.readFile("./users.json", (err, data)=>{
@@ -67,6 +72,7 @@ server.post('/api/auth/register', (req, res) => {
   
 server.post('/api/auth/login', (req, res) => {
     const {email, password} = req.body
+    
     if (!isAuthenticated({email, password})) {
       const status = 401
       const message = 'Email ou senha incorretos'

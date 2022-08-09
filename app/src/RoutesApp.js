@@ -9,18 +9,8 @@ import UsersEdit from "./Components/Pages/UsersEdit"
 import Login from "./Components/Pages/Auth/Login"
 import Register from "./Components/Pages/Auth/Register"
 
-
-
 import Conteiner from "./Components/Layout/Conteiner";
 
-// const Private = ({ item }) => {
-
-//   const signed = false;
-
-//   return signed > 0 ? <item/> : <Login/>
-
-// }
-// Private item= {<Home/>}/> 
 
 
 function RoutesApp() {

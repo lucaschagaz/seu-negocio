@@ -2,12 +2,12 @@ import Input from "../../Form/input";
 import Button from "../../Form/button"
 import { useState } from "react";
 
-
 function FormUser({handleSubmit, btnText}){
 
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+   
 
     function submit(e){
         e.preventDefault()

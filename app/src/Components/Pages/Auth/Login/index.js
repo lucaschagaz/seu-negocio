@@ -10,6 +10,7 @@ import styles from "./Login.module.css";
 const Login = () => {
   
   const [erro, setErro] = useState();
+  const [isLogged, setLogged] = useState(false)
   const navigate = useNavigate();
 
   function acessLogin({ email, password }) {
@@ -23,9 +24,17 @@ const Login = () => {
         token: response.data.access_token
       }))
       setErro("")
-      navigate("/Home")
+      setLogged(!isLogged)
+      if(!isLogged){
+        navigate("/Home")
+      }
     }).catch((error) => {
       setErro(error.response.data.message)
+      if(!isLogged){
+        setTimeout(() => {
+          navigate("/Register")
+        }, 2000);
+      }
     })
   }
 

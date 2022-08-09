@@ -16,6 +16,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   function acessRegister({ email, password }) {
+    
     axios.post("http://localhost:5000/api/auth/register", {
       email,
       password,
