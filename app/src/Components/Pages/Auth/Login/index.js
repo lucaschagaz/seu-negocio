@@ -10,8 +10,10 @@ import styles from "./Login.module.css";
 const Login = () => {
   
   const [erro, setErro] = useState();
-  const [isLogged, setLogged] = useState(false)
+  const [redirectToHome, setRedirectToHome] = useState(false)
+  const [redirectToRegister, setRedirectToRegister] = useState(false)
   const navigate = useNavigate();
+
 
   function acessLogin({ email, password }) {
     axios.post("http://localhost:5000/api/auth/login", {
@@ -19,23 +21,26 @@ const Login = () => {
       password,
     }).then((response)=> {
       console.log(response)
+      localStorage.setItem("user", JSON.stringify({email: email, password: password}))
       localStorage.setItem("login", JSON.stringify({
         userLogin: true,
         token: response.data.access_token
       }))
       setErro("")
-      setLogged(!isLogged)
-      if(!isLogged){
-        navigate("/Home")
-      }
+      setRedirectToHome(true)
     }).catch((error) => {
       setErro(error.response.data.message)
-      if(!isLogged){
-        setTimeout(() => {
-          navigate("/Register")
-        }, 2000);
-      }
+      setRedirectToRegister(true)
     })
+  }
+
+  if(redirectToHome){
+    return navigate("/Home")
+  }
+  else if(redirectToRegister){
+    setTimeout(() => {
+      navigate("/Register")
+    }, 3000);
   }
 
   return (
@@ -45,11 +50,11 @@ const Login = () => {
           Seu <span>Negocio</span>
         </h1>
         <h2>Fazer login:</h2>
-        {erro && <p className={styles.message_login}>{erro}</p>}
         <FormUser handleSubmit={acessLogin} btnText="Entrar"></FormUser>
         <p>
           não tem conta? <Link to="/register">Registre-se aqui</Link>
         </p>
+        {erro && <p className={styles.message_login}>{erro}</p>}
       </div>
     </Conteiner>
   );

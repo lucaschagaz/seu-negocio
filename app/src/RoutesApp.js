@@ -11,7 +11,11 @@ import Register from "./Components/Pages/Auth/Register"
 
 import Conteiner from "./Components/Layout/Conteiner";
 
+const Private = ({Item}) =>{
 
+  // const logged = false
+  return localStorage.getItem("user") ? <Item/> : <Login/>
+}
 
 function RoutesApp() {
   return (
@@ -21,12 +25,12 @@ function RoutesApp() {
         <Conteiner>
           <Routes>
             <Route path="/" element={<LandingPage/>}></Route>
-            <Route path="/Home" element={<Home/>}></Route>
-            <Route path="/DashBoard" element={<DashBoard/>}></Route>
-            <Route path="/Products" element={<Products/>}></Route>
+            <Route path="/Home" element={<Private Item={Home}/>}></Route>
+            <Route path="/DashBoard" element={<Private Item={DashBoard}/>}></Route>
+            <Route path="/Products" element={<Private Item={Products}/>}></Route>
             <Route path="/Login" element={<Login/>}></Route>
             <Route path="/Register" element={<Register/>}></Route>
-            <Route path="/UsersEdit" element={<UsersEdit/>}></Route>
+            <Route path="/UsersEdit" element={<Private Item={UsersEdit}/>}></Route>
           </Routes>
         </Conteiner>
       </Router>

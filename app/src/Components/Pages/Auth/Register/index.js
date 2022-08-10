@@ -21,12 +21,11 @@ const Register = () => {
       email,
       password,
     }).then((response)=> {
-
       console.log(response)
-      localStorage.setItem("login", JSON.stringify({
-        userLogin: true,
-        token: response.data.access_token
-      }))
+      // localStorage.setItem("login", JSON.stringify({
+      //   userLogin: true,
+      //   token: response.data.access_token
+      // }))
       setErro("")
       navigate("/Login")
     }).catch((error) =>{
@@ -42,9 +41,9 @@ const Register = () => {
           Seu <span>Negocio</span>
         </h1>
         <h2>Crie uma Conta:</h2>
-        {erro && <p className={styles.message_register}>{erro}</p>}
         <FormUser handleSubmit={acessRegister} btnText="Registrar"></FormUser>
         <p>Já possui conta? <Link to="/Login">Faça login aqui</Link></p>
+        {erro && <p className={styles.message_register}>{erro}</p>}
       </div>
     </Conteiner>
   );
