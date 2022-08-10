@@ -3,7 +3,7 @@
 
 # 💻 Seu negocio (Gerenciador de prudutos e estoque)
 
-Seu negocio é um sistema de gerenciamento de estoque aonde o proprietario e/ou seus colaboradores organizam e quantificam os produtos, adicione, liste, exclua e atualize os produtos do seu estabelecimento.
+Seu negocio é um sistema de gerenciamento de estoque onde o proprietario e/ou seus colaboradores organizam e quantificam os produtos, adicionam, listam, excluem e atualizam os produtos do seu estabelecimento.
 
 
 # 🛠 Tecnologias Ultilizadas
@@ -28,7 +28,7 @@ Seu negocio é um sistema de gerenciamento de estoque aonde o proprietario e/ou 
 
 1- Para instalar as dependências:
 
-- navegue ate a pasta app e rode:
+- navegue até a pasta app e rode no seu terminal :
 
     npm install
 
@@ -38,15 +38,13 @@ Seu negocio é um sistema de gerenciamento de estoque aonde o proprietario e/ou 
 
 2- Para inicar o banco de dados fake do Json-server:
 
-- rode o comando na pasta app:
+- abra outro terminal também na pasta app e rode:
     
     npm run backend
 
 3- Para iniciar o Servidor fake (Json-Server):
 
-- navegue pelo seu cmd até a pasta server
-
-- rode o comando :
+- navegue até a pasta server e rode no seuterminal o comando :
 
     npm run auth
 
