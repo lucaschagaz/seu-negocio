@@ -1,9 +1,14 @@
 .navBar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #301d97;
 }
 .navBar a h3{
+    font-size: 1.5em;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+.navBar h3{
     font-size: 1.5em;
     color: #f1f1f1;
     text-decoration: none;

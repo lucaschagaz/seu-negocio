@@ -18,9 +18,9 @@ function LandingPage(){
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
                 <LinkButton text="Crie seu Conta agora" to="/Register"></LinkButton>
             </div>
-            <div className={styles.landing_image}>
+            {/* <div className={styles.landing_image}>
                 <img src={Inventario} alt="inventario"></img>
-            </div>
+            </div> */}
        </Conteiner>
     )
 

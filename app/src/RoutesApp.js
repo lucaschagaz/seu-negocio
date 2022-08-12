@@ -1,3 +1,4 @@
+// import { useEffect, useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import LandingPage from "./Components/Pages/LandingPage";
@@ -11,17 +12,20 @@ import Register from "./Components/Pages/Auth/Register"
 
 import Conteiner from "./Components/Layout/Conteiner";
 
-const Private = ({Item}) =>{
+// import { UserContext } from "../../app/src/App";
 
-  // const logged = false
-  return localStorage.getItem("user") ? <Item/> : <Login/>
-}
 
 function RoutesApp() {
+
+  const Private = ({Item}) =>{
+
+    return localStorage.getItem("login") ? <Item/> : <Login/>
+  }
+
   return (
     <div>
       <Router>
-        <Header isLogged={false}></Header>
+        <Header></Header>
         <Conteiner>
           <Routes>
             <Route path="/" element={<LandingPage/>}></Route>

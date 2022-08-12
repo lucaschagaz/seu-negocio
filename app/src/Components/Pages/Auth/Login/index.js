@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"
 
@@ -6,9 +6,12 @@ import Conteiner from "../../../Layout/Conteiner";
 import FormUser from "../../../Layout/formUser";
 
 import styles from "./Login.module.css";
+import { UserContext } from "../../../../App";
 
 const Login = () => {
-  
+
+  const {state, dispatch} = useContext(UserContext)
+
   const [erro, setErro] = useState();
   const [redirectToHome, setRedirectToHome] = useState(false)
   const [redirectToRegister, setRedirectToRegister] = useState(false)
@@ -26,6 +29,7 @@ const Login = () => {
         userLogin: true,
         token: response.data.access_token
       }))
+      dispatch({type: "USER", payload: true})
       setErro("")
       setRedirectToHome(true)
     }).catch((error) => {
