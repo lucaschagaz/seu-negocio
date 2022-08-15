@@ -43,7 +43,12 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <button onClick={logout}>LogOut</button>
+          <div className={styles.headerUser}>
+            <li>
+              <Link to="/UserEdit">Usuario</Link>
+            </li>
+            <button onClick={logout}>LogOut</button>
+          </div>
         </Conteiner>
       )}
       {!state && (

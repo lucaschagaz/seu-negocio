@@ -1,29 +1,28 @@
 .form_conteiner{
-    padding: 2em 3.5em;
+    padding: 2em 3em;
     z-index:999;
     text-align:center;
-    border: 1px solid #fff;
-    background-color: #5b43e0;
     border-radius: 2px;
-    color:#f1f1f1;
+    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(255, 247, 0) 100%) repeat scroll 0% 0%;
+    color:#fff;
+    border-radius:5px;
 }
-.form_conteiner h1 span{
-    background-color: #f1f1f1;
-    color:#5b43e0;
+/* .form_conteiner h1 span{
+    background-color:#fff;
+    color:rgb(255, 0, 0);
     padding: 0.2em 0.5em ;
     margin-left: 0.1em;
-}
+} */
 .form_conteiner h2{
     margin:0.8em 0;
 }
 .message_login{
-    color:#f81212;
-    background-color:#f1f1f1;
+    color:#f1f1f1;
     font-size: 1.2em;
     margin: 0.5em 0;
 }
 .form_conteiner p a{
-    color:#222;
+    color:rgb(255, 0, 0);
     font-size:1.2em;
     text-decoration:none;
 }

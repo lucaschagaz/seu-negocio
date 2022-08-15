@@ -13,9 +13,10 @@
     padding: 0.7em;
     border-radius: 0;
     border: none;
-    background-color:#f1f1f1;
+    border-bottom: 1px solid #222;
+    background-color:transparent;
 }
 .input_Conteiner input::placeholder{
-    color: #222;
+    color: #fff;
     font-size: 1.2em;
 }

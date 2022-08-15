@@ -1,0 +1,29 @@
+.footer{
+    padding: 1em 0;
+    text-align: center;
+    color: #222;
+    border-top:1px solid rgba(255, 165, 0, 1);      
+}
+
+.listIcons{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+}
+
+.icons{
+    padding: 10px;
+}
+.icons:hover{
+    color: #ffbb33;
+    padding: 10px;
+}
+.icons svg{
+    cursor: pointer;
+    font-size: 1.5em;
+}
+.copywrite span{
+    color: #ffbb33;  
+    font-weight: bold;
+}

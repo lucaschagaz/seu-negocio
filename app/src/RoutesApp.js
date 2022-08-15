@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import LandingPage from "./Components/Pages/LandingPage";
 import Header from "./Components/Layout/Header";
+import Footer from "./Components/Layout/Footer"
 import Home from "./Components/Pages/Home"
 import DashBoard from "./Components/Pages/DashBoard"
 import Products from "./Components/Pages/Products"
@@ -26,7 +27,7 @@ function RoutesApp() {
     <div>
       <Router>
         <Header></Header>
-        <Conteiner>
+        <Conteiner customClass="min-heigth">
           <Routes>
             <Route path="/" element={<LandingPage/>}></Route>
             <Route path="/Home" element={<Private Item={Home}/>}></Route>
@@ -37,6 +38,7 @@ function RoutesApp() {
             <Route path="/UsersEdit" element={<Private Item={UsersEdit}/>}></Route>
           </Routes>
         </Conteiner>
+        <Footer></Footer>
       </Router>
     </div>
   );
