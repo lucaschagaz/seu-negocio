@@ -8,6 +8,5 @@ html,
 body,
 #root{
   height: 100%;
-  background-color: #fff;
-
+  background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(255, 247, 0) 100%) repeat scroll 0% 0%;
 }

@@ -6,10 +6,10 @@ function LandingPage() {
   return (
     <div className={styles.landing_conteiner}>
       <h1>
-        Controle o seu <span>Negocio</span>
+          Controle os seus <span>Projetos</span>
       </h1>
-      <h2>O melhor amiga do seu negocio!</h2>
-      <LinkButton text="Crie seu Conta agora" to="/Register"></LinkButton>
+      <h2>Ferramenta de auxilio no gerenciamneto de projetos.</h2>
+      <LinkButton text="Crie seu conta agora" to="/Register"></LinkButton>
     </div>
   );
 }

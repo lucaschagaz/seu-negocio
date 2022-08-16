@@ -26,7 +26,11 @@ const Header = () => {
     <nav className={styles.navBar}>
       {state && (
         <Conteiner>
-          <h3>Seu Negocio</h3>
+          <Link to="/Home">
+            <h3>
+              <span></span>Seu Negocio
+            </h3>
+          </Link>
           <div className={styles.logo_header}>
             <ul className={styles.list}>
               <li className={styles.listItem}>
@@ -36,10 +40,7 @@ const Header = () => {
                 <Link to="/Products">Produtos</Link>
               </li>
               <li className={styles.listItem}>
-                <Link to="/DashBoard">DashBoard</Link>
-              </li>
-              <li className={styles.listItem}>
-                <Link to="/UsersEdit">Editar Usuario</Link>
+                <Link to="/Contato">Contato</Link>
               </li>
             </ul>
           </div>

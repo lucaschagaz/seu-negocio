@@ -3,9 +3,9 @@
     cursor: pointer;
     transition: 0.5s;
     border: none;
-    color:rgb(255, 0, 0);
+    color:#222;
     box-shadow:2px 2px 2px #999;
-    background-color: #ffff;
+    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(255, 247, 0) 100%) repeat scroll 0% 0%;
     font-size: 1.2em;
     display: inline-block;
     margin-bottom: 1em;
@@ -16,5 +16,4 @@
 }
 .submit_Button:hover{
     color:#f1f1f1;
-    background-color: blue;
 }

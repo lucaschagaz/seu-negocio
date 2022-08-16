@@ -1,0 +1,16 @@
+.home_Conteiner h1{
+    margin-bottom:15px;
+    color:#fff;
+}
+.home_Conteiner h1 span{
+    padding:0.2em 0.5em;
+    border-bottom: 2px solid #222;
+}
+.home_Conteiner a{
+    padding: 0.6em 0.8em;
+}
+
+.home_Conteiner h2{
+    margin: 15px 0;    
+    color:#fff;
+}

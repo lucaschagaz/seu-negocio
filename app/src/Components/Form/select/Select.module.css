@@ -1,0 +1,18 @@
+.select_Conteiner{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.select_Conteiner label{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.select_Conteiner select{
+    padding: 0.7em;
+    border-radius: 0;
+    border: none;
+    background-color: #fff;
+    font-size: 1em;
+    color: #7b7b7b;
+}

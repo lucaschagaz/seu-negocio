@@ -5,20 +5,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    color:#fff;
 }
 .landing_conteiner h2,
 .landing_conteiner p{
     margin-bottom: 0.6em;
-    color: #222;
 }
 .landing_conteiner h1{
     font-size: 3em;
-    color:#111;
     margin-bottom: 0.6em;
 }
 .landing_conteiner h1 span{
-    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(255, 247, 0) 100%) repeat scroll 0% 0%;
-    color:#fff;
+    color:#222;
     padding: 0.2em 0.5em ;
+    border-bottom:2px solid #222;
 }

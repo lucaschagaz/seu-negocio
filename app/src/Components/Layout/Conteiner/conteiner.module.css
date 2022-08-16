@@ -21,10 +21,11 @@
     flex-direction: column;
     justify-content: flex-start;
 }
+
 .around{
     justify-content: space-evenly;
 }
-
-.min-heigth{
-    min-height: 90%;
+.min-heigth {
+    min-height: 90vh;
+    justify-content: center;
 }

@@ -1,10 +1,10 @@
 
 import Conteiner from "../../Layout/Conteiner";
 
-import styles from "./DashBoard.module.css";
+import styles from "./Contato.module.css";
 
 
-const DashBoard = (props) => {
+const Contato = (props) => {
 
   return (
     <nav className={styles.navBar}>
@@ -17,4 +17,4 @@ const DashBoard = (props) => {
   );
 };
 
-export default DashBoard;
+export default Contato;

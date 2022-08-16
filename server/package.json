@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "auth": "node server.js --no-cors"
+    "auth": "node server.js --no-cors",
+    "backend": "json-server --watch db.json --port 4000"
   },
   "author": "",
   "license": "ISC",
