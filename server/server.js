@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken')
 const cors = require('cors')
 
 
-
 const server = jsonServer.create()
 const userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'))
 
