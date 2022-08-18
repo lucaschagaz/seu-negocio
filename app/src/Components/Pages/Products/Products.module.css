@@ -1,0 +1,24 @@
+.projects_conteiner{
+    padding-top: 2em;
+}
+.title_conteiner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:2em;
+    padding: 0 1em ;
+}
+.button{
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    background-color: #fff;
+    font-size: 1rem;
+    border: none;
+}
+.button a{
+    text-decoration: none;
+    color: #222;
+}
+.projects_conteiner h1{
+    color:#fff;
+}

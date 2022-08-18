@@ -22,7 +22,6 @@ const Products = (props) => {
     .then((resp)=> resp.json())
     .then((data)=>{
       setProjects(data)
-      console.log(projects)
     })
     .catch((erro)=>{
       console.log(erro)
@@ -30,13 +29,31 @@ const Products = (props) => {
 
   },[])
 
+  const handleOnRemove = (id) =>{
+   
+    fetch(`http://localhost:4000/projects/${id}`,{
+      method: "DELETE",
+      headers: {"Content-Type" : "application/json"}
+    })
+    .then((resp)=> resp.json())
+    .then(()=>{
+      setProjects(projects.filter((item) => (item.id !== id)
+      ))
+    })
+    .catch((erro)=>{
+      console.log(erro)
+    })
+  }
+
   return (
-    <div className={styles.navBar}>
-      <div>
-      <h1>Todos os projetos</h1>
-      <Link to="/NewProject">
-        <button>Criar novo projeto</button>
-      </Link>
+    <div className={styles.projects_conteiner}>
+      <div  className={styles.title_conteiner}>
+        <h1>Todos os projetos</h1>
+        <button className={styles.button}>
+        <Link to="/NewProject">
+          Criar novo projeto
+        </Link>
+        </button>
       </div>
      <Conteiner customClass="start">
         {projects.map((project)=>(
@@ -44,11 +61,14 @@ const Products = (props) => {
           name={project.name}
           bugdet={project.bugdet}
           category={project.category}
+          id={project.id}
+          key={project.id}          
+          handleRemove={handleOnRemove}
           ></ProjectCard>
         ))
         }
      </Conteiner>
- </div>
+  </div>
   );
 };
 
