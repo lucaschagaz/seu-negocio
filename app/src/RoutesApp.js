@@ -6,7 +6,7 @@ import Header from "./Components/Layout/Header";
 import Footer from "./Components/Layout/Footer"
 import Home from "./Components/Pages/Home"
 import Contato from "./Components/Pages/Contato"
-import Products from "./Components/Pages/Products"
+import Projects from "./Components/Pages/Projects"
 import UsersEdit from "./Components/Pages/UsersEdit"
 import Login from "./Components/Pages/Auth/Login"
 import Register from "./Components/Pages/Auth/Register"
@@ -15,7 +15,6 @@ import NewProject from "./Components/Pages/NewProject"
 
 import Conteiner from "./Components/Layout/Conteiner";
 
-// import { UserContext } from "../../app/src/App";
 
 
 function RoutesApp() {
@@ -33,7 +32,7 @@ function RoutesApp() {
             <Route path="/" element={<LandingPage/>}></Route>
             <Route path="/Home" element={<Private Item={Home}/>}></Route>
             <Route path="/Contato" element={<Private Item={Contato}/>}></Route>
-            <Route path="/Products" element={<Private Item={Products}/>}></Route>
+            <Route path="/Projects" element={<Private Item={Projects}/>}></Route>
             <Route path="/Login" element={<Login/>}></Route>
             <Route path="/Register" element={<Register/>}></Route>
             <Route path="/UsersEdit" element={<Private Item={UsersEdit}/>}></Route>

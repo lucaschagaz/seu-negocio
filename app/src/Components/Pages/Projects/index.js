@@ -6,10 +6,10 @@ import {Link} from "react-router-dom";
 import Conteiner from "../../Layout/Conteiner";
 import ProjectCard from "../../Project/ProjectCard"
 
-import styles from "./Products.module.css";
+import styles from "./Projects.module.css";
 
 
-const Products = (props) => {
+const Projects = (props) => {
 
   const [projects, setProjects] = useState([])
 
@@ -72,4 +72,4 @@ const Products = (props) => {
   );
 };
 
-export default Products;
+export default Projects;
