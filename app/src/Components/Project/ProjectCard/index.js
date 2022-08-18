@@ -1,11 +1,16 @@
 import styles from "./Card.module.css"
 
+import { Link } from "react-router-dom"
 import {BsPencil, BsFillTrashFill} from "react-icons/bs"
-import {Link} from "react-router-dom"
 
 
 
-function ProjectCard({name, bugdet, category}){
+function ProjectCard({name, bugdet, category, id, handleRemove}){
+
+    const remove= (e) =>{
+        e.preventDefault()
+        handleRemove(id)
+    }
 
     return(
         <div className={styles.Card}>
@@ -17,10 +22,10 @@ function ProjectCard({name, bugdet, category}){
                 <span className={`${styles[category.name.toLowerCase()]}`}></span>{category.name}
             </p>
             <div className={styles.project_card_actions}>
-                <Link to={"/SingleProject"}>
+                <Link to={`/SingleProject/${id}`}>
                     <BsPencil></BsPencil>Editar
                 </Link>
-                <button>
+                <button onClick={remove}>
                     <BsFillTrashFill></BsFillTrashFill>Remover
                 </button>
             </div>

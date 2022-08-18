@@ -26,7 +26,6 @@ function RoutesApp() {
   }
 
   return (
-    <div>
       <Router>
         <Header></Header>
         <Conteiner customClass="min-heigth">
@@ -43,7 +42,6 @@ function RoutesApp() {
         </Conteiner>
         <Footer></Footer>
       </Router>
-    </div>
   );
 }
 

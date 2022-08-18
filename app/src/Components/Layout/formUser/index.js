@@ -39,7 +39,7 @@ function FormUser({handleSubmit, btnText}){
                 ></Input>
                 <Button text={btnText}></Button>
             </form>
-    </div>
+        </div>
     )
 
 

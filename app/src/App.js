@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+// import { Fragment } from "react";
 import { createContext, useReducer } from "react"
 import RoutesApp from "./RoutesApp"
 
@@ -12,9 +12,7 @@ function App() {
   
   return (
     <UserContext.Provider value={{state, dispatch}}>
-      <Fragment>
-        <RoutesApp></RoutesApp>
-      </Fragment>
+      <RoutesApp></RoutesApp>
     </UserContext.Provider>
   );
 }

@@ -1,10 +1,20 @@
+.home_Conteiner{
+    padding: 3em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .home_Conteiner h1{
     margin-bottom:15px;
     color:#fff;
 }
 .home_Conteiner h1 span{
+    color:#222;
+    font-size: 2rem;
     padding:0.2em 0.5em;
-    border-bottom: 2px solid #222;
+    border-bottom: 3px solid #fff;
 }
 .home_Conteiner a{
     padding: 0.6em 0.8em;
@@ -14,3 +24,6 @@
     margin: 15px 0;    
     color:#fff;
 }
+
+
+

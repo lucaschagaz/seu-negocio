@@ -2,19 +2,18 @@
     width: 1200px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
     flex-wrap: wrap;
-    padding: 1.2em;
 }
 
 .center{
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
+    align-items: center;
 }
 
 .start{
-    justify-content: flex-start;
+    justify-content: space-evenly;
 }
 
 .column{
@@ -26,6 +25,8 @@
     justify-content: space-evenly;
 }
 .min-heigth {
-    min-height: 90vh;
+    min-height: 90%;
     justify-content: center;
+    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(255, 247, 0) 100%) repeat scroll 0% 0%;
+    /* align-items: flex-start; */
 }

@@ -1,5 +1,6 @@
 .form_conteiner{
-    padding: 2em 3em;
+    height: 70%;
+    padding: 1em 2em;
     z-index:999;
     text-align:center;
     border-radius: 2px;
@@ -7,12 +8,7 @@
     color:#222;
     border-radius:5px;
 }
-/* .form_conteiner h1 span{
-    background-color:#fff;
-    color:rgb(255, 0, 0);
-    padding: 0.2em 0.5em ;
-    margin-left: 0.1em;
-} */
+
 .form_conteiner h2{
     margin:0.8em 0;
 }
