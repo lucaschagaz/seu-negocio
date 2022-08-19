@@ -1,60 +1,64 @@
-import { useEffect, useState } from "react";
-import {Link} from "react-router-dom";
+import { Fragment, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-import Button from "../../Form/button";
+// import Button from "../../Form/button";
 import Conteiner from "../../Layout/Conteiner";
+import ProjectForm from "../../Project/ProjectForm";
 
-import styles from "./Products.module.css";
+import styles from "./SingleProject.module.css";
 
 
-const Products = (props) => {
+const SingleProject = () => {
 
-  const [projects, setProjects] = useState([])
+    const { id } = useParams() 
 
-//     useEffect(()=>{
+    const [project, setProject] = useState([])
 
-//     fetch("http://localhost:4000/projects",{
-//       method: "GET",
-//       headers: {"Content-Type" : "application/json"}
-//     })
-//     .then((resp)=> resp.json())
-//     .then((data)=>{
-//       setProjects(data)
-//     })
-//     .catch((erro)=>{
-//       console.log(erro)
-//     })
 
-//   },[])
 
-//   const handleOnRemove = (id) =>{
+    useEffect(()=>{
+
+        fetch(`http://localhost:4000/projects/${id}`,{
+            method: "GET",
+            headers: {"Content-Type" : "application/json"}
+        })
+        .then((resp)=> resp.json())
+        .then((data)=>{
+            setProject(data)
+        })
+        .catch((erro)=>{
+            console.log(erro)
+        })
+
+    },[id])
+
+    const editProject = (project) =>{
    
-//     fetch(`http://localhost:4000/projects/${id}`,{
-//       method: "DELETE",
-//       headers: {"Content-Type" : "application/json"}
-//     })
-//     .then((resp)=> resp.json())
-//     .then(()=>{
-//       setProjects(projects.filter((item) => (item.id !== id)
-//       ))
-//     })
-//     .catch((erro)=>{
-//       console.log(erro)
-//     })
-//   }
+        fetch(`http://localhost:4000/projects/${project.id}`,{
+        method: "PATCH",
+        headers: {"Content-Type" : "application/json"},
+        body: JSON.stringify(project)
+
+        })
+        .then((resp)=> resp.json())
+        .then((data)=>{
+            setProject(data)
+        })
+        .catch((erro)=>{
+        console.log(erro)
+        })
+  }
 
   return (
-    <div className={styles.projects_conteiner}>
-      <div  className={styles.title_conteiner}>
-        <h1></h1>
-        <button className={styles.button}>
-        </button>
-      </div>
-     <Conteiner customClass="start">
-       
-     </Conteiner>
-  </div>
+    <Fragment>
+        {
+        
+        
+
+        }
+         <ProjectForm handleSubmit={editProject} btnText="Atualizar" dataProject={project}/>
+    </Fragment>
   );
 };
 
-export default Products;
+export default SingleProject;

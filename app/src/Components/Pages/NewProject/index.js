@@ -21,7 +21,7 @@ function NewProject () {
       
     }).then((resp) =>{ resp.json()})
     .then((data) =>{
-      navigate("/Products")
+      navigate("/Projects")
       console.log(data)
     }).catch((err) =>{
       console.log(err)

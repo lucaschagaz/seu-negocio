@@ -65,6 +65,17 @@
       "cost": 0,
       "services": [],
       "id": 6
+    },
+    {
+      "name": "contratar novo PM",
+      "bugdet": "15000",
+      "category": {
+        "id": "3",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 7
     }
   ],
   "categories": [

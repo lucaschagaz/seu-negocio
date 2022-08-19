@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 
 import styles from "./ProjectForm.module.css"
 
-function ProjectForm({ handleSubmit, btnText}){
+function ProjectForm({ handleSubmit, btnText, dataProject}){
 
 
-    const [project, setProject] = useState({})
+    const [project, setProject] = useState(dataProject || {})
     const [category, setCategory] = useState([])
 
     useEffect(()=>{
@@ -34,7 +34,7 @@ function ProjectForm({ handleSubmit, btnText}){
     function handleCategory(e){
         setProject({...project,
             category:{
-                id:e.target.value,
+                id: e.target.value,
                 name: e.target.options[e.target.selectedIndex].text
             }
         })

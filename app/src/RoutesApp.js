@@ -10,11 +10,12 @@ import Projects from "./Components/Pages/Projects"
 import UsersEdit from "./Components/Pages/UsersEdit"
 import Login from "./Components/Pages/Auth/Login"
 import Register from "./Components/Pages/Auth/Register"
+import SingleProject from "./Components/Pages/SingleProject"
 import NewProject from "./Components/Pages/NewProject"
 
 
-import Conteiner from "./Components/Layout/Conteiner";
 
+import Conteiner from "./Components/Layout/Conteiner";
 
 
 function RoutesApp() {
@@ -36,6 +37,7 @@ function RoutesApp() {
             <Route path="/Login" element={<Login/>}></Route>
             <Route path="/Register" element={<Register/>}></Route>
             <Route path="/UsersEdit" element={<Private Item={UsersEdit}/>}></Route>
+            <Route path="/SingleProject/:id" element={<Private Item={SingleProject}/>}></Route>
             <Route path="/NewProject" element={<Private Item={NewProject}/>}></Route>
           </Routes>
         </Conteiner>
