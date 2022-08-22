@@ -3,8 +3,7 @@
 
 # 💻 Seu negocio (Gerenciador de prudutos e estoque)
 
-Seu negocio é um sistema de gerenciamento de estoque onde o proprietario e/ou seus colaboradores organizam e quantificam os produtos, adicionam, listam, excluem e atualizam os produtos do seu estabelecimento.
-
+"texto  que descreve o projeto"
 
 # 🛠 Tecnologias Ultilizadas
 
@@ -44,7 +43,7 @@ Seu negocio é um sistema de gerenciamento de estoque onde o proprietario e/ou s
 
 3- Para iniciar o Servidor fake (Json-Server):
 
-- navegue até a pasta server e rode no seuterminal o comando :
+- navegue até a pasta server e rode no seu terminal o comando :
 
     npm run auth
 
