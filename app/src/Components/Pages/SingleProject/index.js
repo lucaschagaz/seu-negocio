@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 // import Button from "../../Form/button";
 import Conteiner from "../../Layout/Conteiner";
@@ -11,9 +11,10 @@ import styles from "./SingleProject.module.css";
 const SingleProject = () => {
 
     const { id } = useParams() 
+    const navigate = useNavigate()
 
     const [project, setProject] = useState([])
-
+    const [showForm, setShowForm] = useState(false)
 
 
     useEffect(()=>{
@@ -43,20 +44,49 @@ const SingleProject = () => {
         .then((resp)=> resp.json())
         .then((data)=>{
             setProject(data)
+            navigate("/Projects")
         })
         .catch((erro)=>{
         console.log(erro)
         })
-  }
+    }
+
+    const toogleForm = () =>{
+        setShowForm(!showForm)
+    }
 
   return (
     <Fragment>
-        {
-        
-        
+        {project.name ? (
+             <div className={styles.projects_conteiner}>
+               <Conteiner customClass="start">
+                <div  className={styles.title_conteiner}>
+                    <h1>{project.name}</h1>
+                    <button className={styles.button} onClick={toogleForm}>
+                        {!showForm ? "Editar Projeto" : "Fechar ediação"}
+                    </button>
+                    {!showForm ? (
+                        <div>
+                             <p>
+                                <span>Categoria :</span> {project.category.name}
+                            </p>
+                            <p>
+                                <span>Orçamento do projeto:</span> R${project.bugdet}
+                            </p>
+                            <p>
+                                <span>Total Ultilizado:</span> R${project.cost}
+                            </p>
+                        </div>
+                    ) : (
 
+                        <ProjectForm handleSubmit={editProject} btnText="Atualizar" dataProject={project}/>    
+                    )
+                    }
+                </div>
+               </Conteiner>
+            </div>
+        ) : (<p>Não há Projetos</p>)
         }
-         <ProjectForm handleSubmit={editProject} btnText="Atualizar" dataProject={project}/>
     </Fragment>
   );
 };

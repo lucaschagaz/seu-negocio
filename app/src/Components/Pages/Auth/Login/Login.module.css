@@ -1,6 +1,6 @@
 .form_conteiner{
     height: 70%;
-    padding: 1em 2em;
+    padding: 1em 2em 0.3em 2em;
     z-index:999;
     text-align:center;
     border-radius: 2px;
@@ -13,7 +13,7 @@
     margin:0.8em 0;
 }
 .message_login{
-    color:#f1f1f1;
+    color:rgb(255, 0, 0);
     font-size: 1.2em;
     margin: 0.5em 0;
 }

@@ -23,6 +23,7 @@
 .headerUser{
     display:flex;
     align-items: center;
+    justify-content: center;
     list-style: none;
 }
 .headerUser li a{
@@ -85,8 +86,29 @@
     margin:0 5px;
 }
 
-/* .listItem a:hover {
-    background-color: #d1cfcf62;
-    border-radius: 10px;
-} */
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.menu li{
+   padding: 0 0.5em ;
+}
+.ul{
+    /* position:absolute;
+    top:25px;
+    left:0;
+    background-color:#fff; */
+    display:none;
+}
+/* .menu li:hover ul, .menu li.over ul{
+    display:block;
+}
+
+.menu li ul li{
+    border:1px solid #c0c0c0;
+    display:block;
+    width:150px;
+} */

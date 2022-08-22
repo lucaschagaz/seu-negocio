@@ -1,26 +1,37 @@
 import { Link, useNavigate } from "react-router-dom";
+import { BsFillCaretDownFill } from "react-icons/bs"
+
 
 import Conteiner from "../Conteiner";
+import DropDown from "../DropDown";
 
 import styles from "./Header.module.css";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../../../src/App";
 
 const Header = () => {
+
+
   const navigate = useNavigate();
+  
+  const [dropShow, setDropShow] = useState(true)
   const { state, dispatch } = useContext(UserContext);
 
-   useEffect(() => {
-      if(localStorage.getItem("login")){
-         dispatch({ type: "USER", payload: true })
-      }
-   }, []);
+  useEffect(() => {
+    if(localStorage.getItem("login")){
+      dispatch({ type: "USER", payload: true })
+    }
+  }, []);
 
   const logout = () => {
     localStorage.removeItem("login");
     dispatch({ type: "USER", payload: false });
     navigate("/");
   };
+
+  const showDropDown = () =>{
+    setDropShow(!dropShow)
+  }
 
   return (
     <nav className={styles.navBar}>
@@ -45,10 +56,14 @@ const Header = () => {
             </ul>
           </div>
           <div className={styles.headerUser}>
-            <li>
-              <Link to="/UserEdit">Usuario</Link>
-            </li>
-            <button onClick={logout}>LogOut</button>
+              <div className={styles.menu}>
+                <li onClick={showDropDown}> 
+                  NOME
+                  {!dropShow && <DropDown isActive={dropShow}/> }
+                </li>
+                <BsFillCaretDownFill/>
+              </div>
+              <button onClick={logout}>LogOut</button>
           </div>
         </Conteiner>
       )}

@@ -1,6 +1,6 @@
 .register_conteiner{
     height: 70%;
-    padding: 1em 2em;
+    padding: 1em 2em 0.5em 2em;
     z-index:999;
     text-align:center;
     border-radius: 2px;
@@ -8,12 +8,7 @@
     color:#222;
     border-radius:5px;
 }
-/* .register_conteiner h1 span{
-    background-color: #222;
-    color:#f1f1f1;
-    padding: 0.2em 0.5em;
-    margin-left: 0.1em;
-} */
+
 .register_conteiner h2{
     margin:0.8em 0;
 }
