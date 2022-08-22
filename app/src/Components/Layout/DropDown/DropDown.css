@@ -1,0 +1,29 @@
+.dropdownCard{
+    height: auto;
+    padding: 1em 0.5em;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 2px  2px 3px #222;
+    background-color: #fff;
+    top: 69px;
+    right: 160px;
+    position: absolute;
+    list-style: none;
+}
+.dropdownCard li{
+    margin-bottom:0.5em ;
+}
+.dropdownCard li svg{
+    margin-left: 0.5em;
+}
+
+.button{
+    margin: 1em auto;
+}
+.isActive{
+    display: inline-block;
+} 
+
+.desabilit{
+    display: none;
+}
