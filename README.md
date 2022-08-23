@@ -1,7 +1,7 @@
 # 📷 Demonstração
 
 
-# 💻 Seu negocio (Gerenciador de prudutos e estoque)
+# 💻 Seu negocio (Gerenciador de prpjetos)
 
 "texto  que descreve o projeto"
 
