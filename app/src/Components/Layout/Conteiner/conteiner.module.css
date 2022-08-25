@@ -5,15 +5,17 @@
     margin: 0 auto;
     flex-wrap: wrap;
 }
+.header{
+    align-items: center;
+}
 
 .center{
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }
 
 .start{
-    justify-content: space-evenly;
+    justify-content:flex-start;
 }
 
 .column{
@@ -28,5 +30,4 @@
     min-height: 90%;
     justify-content: center;
     background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(255, 247, 0) 100%) repeat scroll 0% 0%;
-    /* align-items: flex-start; */
 }

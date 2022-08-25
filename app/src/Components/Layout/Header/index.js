@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <nav className={styles.navBar}>
       {state && (
-        <Conteiner>
+        <Conteiner customClass="header">
           <Link to="/Home">
             <h3>
               <span></span>Seu Negocio

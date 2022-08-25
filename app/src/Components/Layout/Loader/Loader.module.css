@@ -4,8 +4,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction:column;
 }
 
 .loader{
-    width: 50px;
+    width: 100px;
+}
+.loader_Conteiner h2{
+    color:#fff;
 }

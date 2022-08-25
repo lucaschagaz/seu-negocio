@@ -1,31 +1,50 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import {Link} from "react-router-dom";
 
 // import Button from "../../Form/button";
 
 import Conteiner from "../../Layout/Conteiner";
+import Loading from "../../Layout/Loader";
+import Pagination from "../../Layout/Pagination/pagination";
 import ProjectCard from "../../Project/ProjectCard"
 
 import styles from "./Projects.module.css";
 
 
-const Projects = (props) => {
+const Projects = () => {
 
+  const [removeLoader, setRemoveLoader] = useState(false)
   const [projects, setProjects] = useState([])
+
+  
+  let PageSize = 6;
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const currentTableData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * PageSize;
+    const lastPageIndex = firstPageIndex + PageSize;
+    return projects.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage]);
 
   useEffect(()=>{
 
-    fetch("http://localhost:4000/projects",{
-      method: "GET",
-      headers: {"Content-Type" : "application/json"}
-    })
-    .then((resp)=> resp.json())
-    .then((data)=>{
-      setProjects(data)
-    })
-    .catch((erro)=>{
-      console.log(erro)
-    })
+    setTimeout(() => {
+
+      fetch("http://localhost:4000/projects",{
+        method: "GET",
+        headers: {"Content-Type" : "application/json"}
+      })
+      .then((resp)=> resp.json())
+      .then((data)=>{
+        setProjects(data)
+        setRemoveLoader(true)
+      })
+      .catch((erro)=>{
+        console.log(erro)
+      })
+
+    }, 300);
 
   },[])
 
@@ -56,7 +75,7 @@ const Projects = (props) => {
         </button>
       </div>
      <Conteiner customClass="start">
-        {projects.map((project)=>(
+        {currentTableData.map((project)=>(
           <ProjectCard
           name={project.name}
           bugdet={project.bugdet}
@@ -67,7 +86,16 @@ const Projects = (props) => {
           ></ProjectCard>
         ))
         }
+        {!removeLoader && <Loading text="Carregando Projetos"></Loading>}
+        {removeLoader && projects.length === 0 && (<h2>Não há Projetos cadastrados</h2>)}
      </Conteiner>
+      <Pagination
+          className="pagination-bar"
+          currentPage={currentPage}
+          totalCount={projects.length}
+          pageSize={PageSize}
+          onPageChange={page => setCurrentPage(page)}
+        />
   </div>
   );
 };
