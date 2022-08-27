@@ -1,31 +1,29 @@
 import { useEffect, useState, useMemo } from "react";
 import {Link} from "react-router-dom";
 
-// import Button from "../../Form/button";
-
 import Conteiner from "../../Layout/Conteiner";
 import Loading from "../../Layout/Loader";
-import Pagination from "../../Layout/Pagination/pagination";
+import Pagination from "../../Layout/Pagination/Pagination";
 import ProjectCard from "../../Project/ProjectCard"
 
 import styles from "./Projects.module.css";
-
 
 const Projects = () => {
 
   const [removeLoader, setRemoveLoader] = useState(false)
   const [projects, setProjects] = useState([])
 
-  
   let PageSize = 6;
-
-  const [currentPage, setCurrentPage] = useState(1);
+  
+  const [currentPage, setCurrentPage] = useState(0);
 
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return projects.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
+
+
 
   useEffect(()=>{
 
@@ -39,12 +37,13 @@ const Projects = () => {
       .then((data)=>{
         setProjects(data)
         setRemoveLoader(true)
+        setCurrentPage(1)
       })
       .catch((erro)=>{
         console.log(erro)
       })
 
-    }, 300);
+    }, 1000);
 
   },[])
 
@@ -89,13 +88,14 @@ const Projects = () => {
         {!removeLoader && <Loading text="Carregando Projetos"></Loading>}
         {removeLoader && projects.length === 0 && (<h2>Não há Projetos cadastrados</h2>)}
      </Conteiner>
+     {removeLoader && 
       <Pagination
-          className="pagination-bar"
-          currentPage={currentPage}
-          totalCount={projects.length}
-          pageSize={PageSize}
-          onPageChange={page => setCurrentPage(page)}
-        />
+        currentPage={currentPage}
+        totalCount={projects.length}
+        pageSize={PageSize}
+        onPageChange={page => setCurrentPage(page)}
+      />  
+    }
   </div>
   );
 };

@@ -1,5 +1,5 @@
-import React from 'react';
-import {  usePagination, DOTS } from "../../../hook/usePagination"
+import { usePagination, DOTS } from '../../../Hook/usePagination';
+import './pagination.css';
 
 const Pagination = props => {
   const {
@@ -8,9 +8,8 @@ const Pagination = props => {
     siblingCount = 1,
     currentPage,
     pageSize,
-    className
   } = props;
-  
+
   const paginationRange = usePagination({
     currentPage,
     totalCount,
@@ -30,18 +29,22 @@ const Pagination = props => {
     onPageChange(currentPage - 1);
   };
 
-  let lastPage = paginationRange[paginationRange.length - 1];
+  let lastPage = paginationRange[paginationRange.length - 1]
 
   return (
-    <ul
-      className={'pagination-container'}
-    >
-      <li
+    <ul className={'pagination-container'}>
+      { currentPage === 1 ? <li
+        className={'pagination-item'}
+      >
+        PREVIUS        
+      </li> : <li
         className={'pagination-item'}
         onClick={onPrevious}
       >
-        <div className="arrow left" />
+        PREVIUS
       </li>
+      } 
+
       {paginationRange.map(pageNumber => {
          
         if (pageNumber === DOTS) {
@@ -57,13 +60,19 @@ const Pagination = props => {
           </li>
         );
       })}
-
-      <li
+      { currentPage === lastPage ? <li
+        className={'pagination-item'}
+       
+      >
+        NEXT
+      </li> : <li
         className={'pagination-item'}
         onClick={onNext}
       >
-        <div className="arrow right" />
+        NEXT
       </li>
+      }
+      
     </ul>
   );
 };
