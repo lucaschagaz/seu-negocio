@@ -1,7 +1,7 @@
 .pagination-container {
     display: flex;
     list-style-type: none;
-    position: absolute;
+    position: relative;
     bottom: 0px;
 }
 .pagination-item {
