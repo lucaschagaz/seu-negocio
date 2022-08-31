@@ -3,8 +3,6 @@
 
 # 💻 Seu negocio (Gerenciador de prpjetos)
 
-"texto  que descreve o projeto"
-
 # 🛠 Tecnologias Ultilizadas
 
 ### As tecnologias ultilizadas neste projeto foram:
