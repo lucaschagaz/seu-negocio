@@ -3,7 +3,7 @@
 
 # 💻 Seu negocio (Gerenciador de prpjetos)
 
-    Seu negocio é uma plataforma de gestão de projetos para equipe, na qual se tem acesso a todos os projetos criados e sendo possivel editar, excluir e criar novos projetos além de adicinar serviços e subtarefas dentro do projeto em formato de lista, além de possuir um sistema de login e registro de usuarios. 
+    Seu negocio é uma plataforma de gestão de projetos para equipe, na qual se tem acesso a todos os projetos criados e sendo possivel editar, excluir e criar novos projetos além de adicinar serviços e subtarefas dentro do projeto em formato de lista, além de possuir um sistema de login e registro de novos usuarios. 
 
 # 🛠 Tecnologias Ultilizadas
 
