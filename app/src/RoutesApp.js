@@ -7,7 +7,6 @@ import Footer from "./Components/Layout/Footer"
 import Home from "./Components/Pages/Home"
 import Contato from "./Components/Pages/Contato"
 import Projects from "./Components/Pages/Projects"
-import UsersEdit from "./Components/Pages/UsersEdit"
 import Login from "./Components/Pages/Auth/Login"
 import Register from "./Components/Pages/Auth/Register"
 import SingleProject from "./Components/Pages/SingleProject"
@@ -36,7 +35,6 @@ function RoutesApp() {
             <Route path="/Projects" element={<Private Item={Projects}/>}></Route>
             <Route path="/Login" element={<Login/>}></Route>
             <Route path="/Register" element={<Register/>}></Route>
-            <Route path="/UsersEdit" element={<Private Item={UsersEdit}/>}></Route>
             <Route path="/SingleProject/:id" element={<Private Item={SingleProject}/>}></Route>
             <Route path="/NewProject" element={<Private Item={NewProject}/>}></Route>
           </Routes>

@@ -64,15 +64,18 @@ const Projects = () => {
   }
 
   return (
+    
     <div className={styles.projects_conteiner}>
-      <div  className={styles.title_conteiner}>
-        <h1>Todos os projetos</h1>
-        <button className={styles.button}>
-        <Link to="/NewProject">
-          Criar novo projeto
-        </Link>
-        </button>
-      </div>
+      {removeLoader && 
+        <div  className={styles.title_conteiner}>
+          <h1>Todos os projetos</h1>
+          <button className={styles.button}>
+            <Link to="/NewProject">
+              Criar novo projeto
+            </Link>
+          </button>
+        </div>
+      }
      <Conteiner customClass="start">
         {currentTableData.map((project)=>(
           <ProjectCard
@@ -85,7 +88,7 @@ const Projects = () => {
           ></ProjectCard>
         ))
         }
-        {!removeLoader && <Loading text="Carregando Projetos"></Loading>}
+        {!removeLoader && <Loading text="Carregando"></Loading>}
         {removeLoader && projects.length === 0 && (<h2>Não há Projetos cadastrados</h2>)}
      </Conteiner>
      {removeLoader && 

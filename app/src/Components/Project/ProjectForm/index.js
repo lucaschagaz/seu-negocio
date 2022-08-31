@@ -3,8 +3,6 @@ import Button from "../../Form/button"
 import Select from "../../Form/select"
 import { useEffect, useState } from "react";
 
-import styles from "./ProjectForm.module.css"
-
 function ProjectForm({ handleSubmit, btnText, dataProject}){
 
 
@@ -42,7 +40,7 @@ function ProjectForm({ handleSubmit, btnText, dataProject}){
 
     return(
         <div>
-            <form onSubmit={submit} className={styles.form}>
+            <form onSubmit={submit}>
                 <Input
                         type="text" 
                         text="Nome do projeto"

@@ -59,14 +59,13 @@ const SingleProject = () => {
     <Fragment>
         {project.name ? (
              <div className={styles.projects_conteiner}>
-               <Conteiner customClass="start">
                 <div  className={styles.title_conteiner}>
                     <h1>{project.name}</h1>
                     <button className={styles.button} onClick={toogleForm}>
                         {!showForm ? "Editar Projeto" : "Fechar ediação"}
                     </button>
                     {!showForm ? (
-                        <div>
+                        <div className={styles.form}>
                              <p>
                                 <span>Categoria :</span> {project.category.name}
                             </p>
@@ -78,12 +77,14 @@ const SingleProject = () => {
                             </p>
                         </div>
                     ) : (
-
-                        <ProjectForm handleSubmit={editProject} btnText="Atualizar" dataProject={project}/>    
+                        <div className={styles.form}>
+                            
+                            <ProjectForm handleSubmit={editProject} btnText="Atualizar" dataProject={project}/>    
+                        
+                        </div>
                     )
                     }
                 </div>
-               </Conteiner>
             </div>
         ) : (<p>Não há Projetos</p>)
         }

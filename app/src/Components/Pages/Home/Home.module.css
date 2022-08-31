@@ -1,5 +1,6 @@
 .home_Conteiner{
-    padding: 3em;
+    /* padding: 3em; */
+    margin: 0 auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -21,7 +22,8 @@
 }
 
 .home_Conteiner h2{
-    margin: 15px 0;    
+    margin: 15px auto;
+    text-align: center;
     color:#fff;
 }
 

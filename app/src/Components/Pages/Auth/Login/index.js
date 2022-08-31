@@ -50,10 +50,7 @@ const Login = () => {
   return (
     <Conteiner customClass="center">
       <div className={styles.form_conteiner}>
-        <h1>
-          Seu <span>Negocio</span>
-        </h1>
-        <h2>Fazer login:</h2>
+        <h1>Fazer login:</h1>
         <FormUser handleSubmit={acessLogin} btnText="Entrar"></FormUser>
         <p>
           não tem conta? <Link to="/register">Registre-se aqui</Link>

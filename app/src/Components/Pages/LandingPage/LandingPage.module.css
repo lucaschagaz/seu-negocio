@@ -1,6 +1,6 @@
 .landing_conteiner{
-    padding: 3em;
     width: 100%;
+    text-align:center;
     display: flex;
     flex-direction: column;
     justify-content: center;

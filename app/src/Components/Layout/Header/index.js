@@ -1,12 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
-import { BsFillCaretDownFill } from "react-icons/bs"
+// import { BsFillCaretDownFill } from "react-icons/bs"
 
 
 import Conteiner from "../Conteiner";
-import DropDown from "../DropDown";
+// import DropDown from "../DropDown";
 
 import styles from "./Header.module.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../../../src/App";
 
 const Header = () => {
@@ -14,13 +14,19 @@ const Header = () => {
 
   const navigate = useNavigate();
   
-  const [dropShow, setDropShow] = useState(true)
+  // const [dropShow, setDropShow] = useState(true)
   const { state, dispatch } = useContext(UserContext);
 
   useEffect(() => {
     if(localStorage.getItem("login")){
       dispatch({ type: "USER", payload: true })
     }
+
+    return function cleanup() { 
+      localStorage.removeItem("login")
+      dispatch({ type: "USER", payload: false })
+    };
+
   }, []);
 
   const logout = () => {
@@ -29,9 +35,9 @@ const Header = () => {
     navigate("/");
   };
 
-  const showDropDown = () =>{
-    setDropShow(!dropShow)
-  }
+  // const showDropDown = () =>{
+  //   setDropShow(!dropShow)
+  // }
 
   return (
     <nav className={styles.navBar}>
@@ -56,19 +62,19 @@ const Header = () => {
             </ul>
           </div>
           <div className={styles.headerUser}>
-              <div className={styles.menu}>
+              {/* <div className={styles.menu}>
                 <li onClick={showDropDown}> 
                   NOME
                   {!dropShow && <DropDown isActive={dropShow}/> }
                 </li>
                 <BsFillCaretDownFill/>
-              </div>
+              </div> */}
               <button onClick={logout}>LogOut</button>
           </div>
         </Conteiner>
       )}
       {!state && (
-        <Conteiner>
+        <Conteiner customClass="header">
           <Link to="/">
             <h3>Seu Negocio</h3>
           </Link>

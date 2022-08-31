@@ -1,0 +1,65 @@
+.projects_conteiner {
+    padding: 2em;
+    width:100%
+}
+
+.projects_conteiner h1,
+.projects_conteiner h2,
+.projects_conteiner p {
+    margin-bottom: 0.8em;
+}
+
+.projects_conteiner h1 {
+    background-color: #fff;
+    color: #222;
+    padding: 0.4em;
+    margin-left:20px;
+}
+
+.projects_conteiner span {
+    font-weight: bold;
+}
+
+.title_conteiner,
+.service_form_container {
+    border-bottom: 1px solid #7a7a7a;
+    padding-bottom: 1.2em;
+    margin-bottom: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.button {
+    background-color: #fff;
+    color: #222;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: 0.5s;
+    border: none;
+    cursor: pointer;
+    max-height: 40px;
+    margin-right:20px;
+    font-weight: bold;
+}
+
+.button:hover {
+    color: #ffbb33;
+}
+
+.form {
+    width: 80%;
+    padding: 1em 2em 0.3em 2em;
+    z-index:999;
+    text-align:center;
+    border-radius: 2px;
+    background-color:#fff;
+    color:#222;
+    border-radius:5px;
+    margin:0 auto;
+}
+.form p{
+    font-size:18px;
+    text-align:justify;
+}
+
