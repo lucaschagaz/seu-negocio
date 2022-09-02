@@ -1,9 +1,12 @@
 # 📷 Demonstração
 
+<br>
 
 # 💻 Seu negocio (Gerenciador de prpjetos)
 
 Seu negocio é uma plataforma de gestão de projetos para equipe, na qual se tem acesso a todos os projetos criados e sendo possivel editar, excluir e criar novos projetos além de adicinar serviços e subtarefas dentro do projeto em formato de lista, além de possuir um sistema de login e registro de novos usuarios
+
+<br>
 
 # 🛠 Tecnologias Ultilizadas
 
@@ -27,23 +30,25 @@ Seu negocio é uma plataforma de gestão de projetos para equipe, na qual se tem
 
 1- Para instalar as dependências:
 
-- No seu terminal navegue até a pasta app e rode:
-
+Nas pastas server e app individualmente rode o comando:
+    
     npm install
 
-- Depois disso, para iniciar a aplicação React :
+2- Para iniciar a aplicação React:
+
+No seu terminal navegue até a pasta app e rode :
 
     npm start
 
-2- Para inicar o banco de dados fake do Json-server:
+3- Para inicar o banco de dados fake do Json-server:
 
-- abra outro terminal, navegue até a pasta server e rode:
+No seu terminal navegue até a pasta server  rode o comando:
     
     npm run backend
 
-3- Para iniciar o Servidor fake (Json-Server):
+4- Para iniciar o Servidor fake (Json-Server):
 
-- na pasta server em outra aba do terminal e rode o comando :
+No seu terminal navegue até a pasta server  rode o comando :
 
     npm run auth
 
