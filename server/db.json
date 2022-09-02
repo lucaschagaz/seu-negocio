@@ -1,6 +1,175 @@
 {
   "projects": [
     {
+      "name": "compra dos macBooks",
+      "bugdet": "30000",
+      "category": {
+        "id": "3",
+        "name": "Planejamento"
+      },
+      "cost": 1530,
+      "services": [
+        {
+          "name": "teste 2 para novo teste de descricao",
+          "cost": "1300",
+          "description": "e bom esta funcioando por que quero terminar logo isso",
+          "id": "b8a119a1-bbd1-476d-96a3-3a41c23bf31e"
+        },
+        {
+          "name": "teste 2 para novo teste de descricao",
+          "cost": "230",
+          "description": "e bom esta funcioando por que quero terminar logo isso",
+          "id": "58bdf9f2-8e43-4084-b1e1-c67af8ff6b48"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "TESTE 1",
+      "category": {
+        "id": "3",
+        "name": "Planejamento"
+      },
+      "bugdet": "1000",
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "teste 2",
+      "bugdet": "3500",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "name": "lucas chagas santos",
+      "bugdet": "3000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
+    },
+    {
+      "name": "teste 6",
+      "bugdet": "400",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 8
+    },
+    {
+      "name": "gggg",
+      "bugdet": "22222",
+      "category": {
+        "id": "3",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 9
+    },
+    {
+      "name": "Contratar um dev Mobile",
+      "bugdet": "5000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 3050,
+      "services": [
+        {
+          "name": "teste 2 so pra testa mesmo ",
+          "cost": "250",
+          "description": "nesse aqui vou falar mais e vou perceber que o texto ficara muito grande, terei que delimitar uma width para esse card",
+          "id": "1f7d8b51-f90d-4ac3-bdb9-77c35be126e0"
+        },
+        {
+          "name": "teste 2 para novo teste de descricao ",
+          "cost": "2800",
+          "description": "lorem imouns lorem imouns lorem imouns lorem imouns lorem imouns lorem imouns lorem imouns lorem imouns lorem imouns v lorem imouns lorem imouns v vlorem imouns lorem imouns ",
+          "id": "2c4d1d66-8a58-4e4b-b689-61a68aba112f"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "compra dos macBooks",
+      "bugdet": "30000",
+      "category": {
+        "id": "3",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "TESTE 1",
+      "category": {
+        "id": "3",
+        "name": "Planejamento"
+      },
+      "bugdet": "1000",
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "teste 2",
+      "bugdet": "3500",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "name": "lucas chagas santos",
+      "bugdet": "3000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
+    },
+    {
+      "name": "teste 6",
+      "bugdet": "400",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 8
+    },
+    {
+      "name": "gggg",
+      "bugdet": "22222",
+      "category": {
+        "id": "3",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 9
+    },
+    {
       "name": "Contratar um dev Mobile",
       "bugdet": "5000",
       "category": {
@@ -76,159 +245,8 @@
       "cost": 0,
       "services": [],
       "id": 9
-    },{
-      "name": "Contratar um dev Mobile",
-      "bugdet": "5000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 1
     },
     {
-      "name": "compra dos macBooks",
-      "bugdet": "30000",
-      "category": {
-        "id": "3",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 2
-    },
-    {
-      "name": "TESTE 1",
-      "category": {
-        "id": "3",
-        "name": "Planejamento"
-      },
-      "bugdet": "1000",
-      "cost": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "name": "teste 2",
-      "bugdet": "3500",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 4
-    },
-    {
-      "name": "lucas chagas santos",
-      "bugdet": "3000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 5
-    },
-    {
-      "name": "teste 6",
-      "bugdet": "400",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 8
-    },
-    {
-      "name": "gggg",
-      "bugdet": "22222",
-      "category": {
-        "id": "3",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 9
-    },{
-      "name": "Contratar um dev Mobile",
-      "bugdet": "5000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 1
-    },
-    {
-      "name": "compra dos macBooks",
-      "bugdet": "30000",
-      "category": {
-        "id": "3",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 2
-    },
-    {
-      "name": "TESTE 1",
-      "category": {
-        "id": "3",
-        "name": "Planejamento"
-      },
-      "bugdet": "1000",
-      "cost": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "name": "teste 2",
-      "bugdet": "3500",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 4
-    },
-    {
-      "name": "lucas chagas santos",
-      "bugdet": "3000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 5
-    },
-    {
-      "name": "teste 6",
-      "bugdet": "400",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 8
-    },
-    {
-      "name": "gggg",
-      "bugdet": "22222",
-      "category": {
-        "id": "3",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 9
-    },{
       "name": "Contratar um dev Mobile",
       "bugdet": "5000",
       "category": {
