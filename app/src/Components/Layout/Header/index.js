@@ -18,14 +18,10 @@ const Header = () => {
   const { state, dispatch } = useContext(UserContext);
 
   useEffect(() => {
+
     if(localStorage.getItem("login")){
       dispatch({ type: "USER", payload: true })
     }
-
-    return function cleanup() { 
-      localStorage.removeItem("login")
-      dispatch({ type: "USER", payload: false })
-    };
 
   }, []);
 
@@ -42,13 +38,12 @@ const Header = () => {
   return (
     <nav className={styles.navBar}>
       {state && (
-        <Conteiner customClass="header">
+        <Conteiner customClass="headerLogged">
           <Link to="/Home">
             <h3>
               <span></span>Seu Negocio
             </h3>
           </Link>
-          <div className={styles.logo_header}>
             <ul className={styles.list}>
               <li className={styles.listItem}>
                 <Link to="/Home">Home</Link>
@@ -60,7 +55,6 @@ const Header = () => {
                 <Link to="/Contato">Contato</Link>
               </li>
             </ul>
-          </div>
           <div className={styles.headerUser}>
               {/* <div className={styles.menu}>
                 <li onClick={showDropDown}> 
@@ -74,7 +68,7 @@ const Header = () => {
         </Conteiner>
       )}
       {!state && (
-        <Conteiner customClass="header">
+        <Conteiner customClass="headerDeslogged">
           <Link to="/">
             <h3>Seu Negocio</h3>
           </Link>

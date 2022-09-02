@@ -3,17 +3,16 @@
     width:100%
 }
 
-.projects_conteiner h1,
-.projects_conteiner h2,
-.projects_conteiner p {
+.title_conteiner h1,
+.title_conteiner h2,
+.title_conteiner p {
     margin-bottom: 0.8em;
 }
 
-.projects_conteiner h1 {
-    background-color: #fff;
-    color: #222;
-    padding: 0.4em;
-    margin-left:20px;
+.projects_conteiner h2 {
+    color:#fff;
+    padding-left:0.5em;
+    margin-bottom:1em;
 }
 
 .projects_conteiner span {
@@ -29,17 +28,25 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.title_conteiner h1 {
+    background-color: #fff;
+    color: #222;
+    padding: 0.4em;
+}
+.service_form_container h2 {
+    color: #fff;
+    padding: 0.4em;
+}
 
 .button {
     background-color: #fff;
     color: #222;
-    padding: 0.5em 1em;
+    padding: 0.2em 0.5em;
     text-decoration: none;
     transition: 0.5s;
     border: none;
     cursor: pointer;
     max-height: 40px;
-    margin-right:20px;
     font-weight: bold;
 }
 
@@ -48,7 +55,7 @@
 }
 
 .form {
-    width: 80%;
+    width: 100%;
     padding: 1em 2em 0.3em 2em;
     z-index:999;
     text-align:center;
@@ -56,7 +63,11 @@
     background-color:#fff;
     color:#222;
     border-radius:5px;
-    margin:0 auto;
+    margin:1em auto;
+}
+.form h2 {
+    color: #222;
+    padding: 0.4em;
 }
 .form p{
     font-size:18px;

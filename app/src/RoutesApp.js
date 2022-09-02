@@ -1,4 +1,4 @@
-// import { useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import LandingPage from "./Components/Pages/LandingPage";
@@ -12,12 +12,24 @@ import Register from "./Components/Pages/Auth/Register"
 import SingleProject from "./Components/Pages/SingleProject"
 import NewProject from "./Components/Pages/NewProject"
 
-
-
 import Conteiner from "./Components/Layout/Conteiner";
 
 
+import { UserContext } from "../src/App";
+
+
 function RoutesApp() {
+
+  const { state, dispatch } = useContext(UserContext);
+
+  // useEffect(() => {
+
+  //   return function cleanup() { 
+  //     localStorage.removeItem("login")
+  //     dispatch({ type: "USER", payload: false })
+  //   };
+
+  // }, []);
 
   const Private = ({Item}) =>{
 
