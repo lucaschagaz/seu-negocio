@@ -49,7 +49,16 @@ server.post('/api/auth/register', (req, res) => {
 
         data = JSON.parse(data.toString())
 
-        let last_item_id = data.users[data.users.length - 1].id 
+        let last_item_id
+
+        if(data.users.id){
+
+            
+            last_item_id = data.users[data.users.length - 1].id
+
+        }else{
+            last_item_id = 0
+        }
 
         data.users.push({ id: last_item_id + 1, email: email, password: password });
 
