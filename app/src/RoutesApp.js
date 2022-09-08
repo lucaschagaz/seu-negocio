@@ -15,21 +15,9 @@ import NewProject from "./Components/Pages/NewProject"
 import Conteiner from "./Components/Layout/Conteiner";
 
 
-import { UserContext } from "../src/App";
 
 
 function RoutesApp() {
-
-  const { state, dispatch } = useContext(UserContext);
-
-  // useEffect(() => {
-
-  //   return function cleanup() { 
-  //     localStorage.removeItem("login")
-  //     dispatch({ type: "USER", payload: false })
-  //   };
-
-  // }, []);
 
   const Private = ({Item}) =>{
 

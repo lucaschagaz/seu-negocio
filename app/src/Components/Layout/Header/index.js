@@ -1,9 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
-// import { BsFillCaretDownFill } from "react-icons/bs"
 
 
 import Conteiner from "../Conteiner";
-// import DropDown from "../DropDown";
 
 import styles from "./Header.module.css";
 import { useContext, useEffect } from "react";
@@ -14,7 +12,6 @@ const Header = () => {
 
   const navigate = useNavigate();
   
-  // const [dropShow, setDropShow] = useState(true)
   const { state, dispatch } = useContext(UserContext);
 
   useEffect(() => {
@@ -31,10 +28,6 @@ const Header = () => {
     navigate("/");
   };
 
-  // const showDropDown = () =>{
-  //   setDropShow(!dropShow)
-  // }
-
   return (
     <nav className={styles.navBar}>
       {state && (
@@ -44,25 +37,18 @@ const Header = () => {
               <span></span>Seu Negocio
             </h3>
           </Link>
-            <ul className={styles.list}>
-              <li className={styles.listItem}>
-                <Link to="/Home">Home</Link>
-              </li>
-              <li className={styles.listItem}>
-                <Link to="/Projects">Projetos criados</Link>
-              </li>
-              <li className={styles.listItem}>
-                <Link to="/Contato">Contato</Link>
-              </li>
-            </ul>
+          <ul className={styles.list}>
+            <li className={styles.listItem}>
+              <Link to="/Home">Home</Link>
+            </li>
+            <li className={styles.listItem}>
+              <Link to="/Projects">Projetos criados</Link>
+            </li>
+            <li className={styles.listItem}>
+              <Link to="/Contato">Contato</Link>
+            </li>
+          </ul>
           <div className={styles.headerUser}>
-              {/* <div className={styles.menu}>
-                <li onClick={showDropDown}> 
-                  NOME
-                  {!dropShow && <DropDown isActive={dropShow}/> }
-                </li>
-                <BsFillCaretDownFill/>
-              </div> */}
               <button onClick={logout}>LogOut</button>
           </div>
         </Conteiner>

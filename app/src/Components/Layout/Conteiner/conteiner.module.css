@@ -1,16 +1,18 @@
 .container {
-    max-width: 90%;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     flex-wrap: wrap;
 }
 .headerLogged{
+    max-width: 100%;
     align-items: center;
     justify-content: space-around;
 }
 .headerDeslogged{
     align-items: center;
+
 }
 
 .center{
@@ -19,6 +21,7 @@
 }
 
 .start{
+    
     justify-content:flex-start;
 }
 
@@ -33,5 +36,5 @@
 .min-heigth {
     min-height: 90%;
     justify-content: center;
-    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(255, 247, 0) 100%) repeat scroll 0% 0%;
+    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(105, 104, 138) 0%, rgb(94, 112, 192) 100%) repeat scroll 0% 0%;
 }

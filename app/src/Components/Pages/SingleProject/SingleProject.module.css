@@ -33,6 +33,9 @@
     color: #222;
     padding: 0.4em;
 }
+.title_conteiner .form {
+    width:100%
+}
 .service_form_container h2 {
     color: #fff;
     padding: 0.4em;
@@ -41,7 +44,7 @@
 .button {
     background-color: #fff;
     color: #222;
-    padding: 0.2em 0.5em;
+    padding: 0.5em 0.8em;
     text-decoration: none;
     transition: 0.5s;
     border: none;
@@ -51,11 +54,11 @@
 }
 
 .button:hover {
-    color: #ffbb33;
+    opacity:0.7;
 }
 
 .form {
-    width: 100%;
+    width: 90%;
     padding: 1em 2em 0.3em 2em;
     z-index:999;
     text-align:center;

@@ -1,5 +1,4 @@
 .navBar{
-
     background-color:#fff;
     padding:1em;
     text-align:center;
@@ -14,17 +13,13 @@
     color:#222;  
 }
 .navBar h3 span {
-    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(255, 247, 0) 100%) repeat scroll 0% 0%;
     width:40px;
     height:40px;
     border-radius:50%;
 }
-.headerUser{
-    /* flex:1; */
-}
 
 .headerUser button{
-    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(255, 247, 0) 100%) repeat scroll 0% 0%;
+    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(105, 104, 138) 0%, rgb(94, 112, 192) 100%) repeat scroll 0% 0%;
     padding: 0.5em 1.1em;
     border-radius:30px;
     color:#fff;
@@ -32,10 +27,10 @@
     border:none;
     font-weight: bold;
 }
-
-.Link_header {
-    /* flex:1; */
+.headerUser button:hover{
+    opacity: 0.5;
 }
+
 .Link_header a{
     text-decoration: none;
     color:#222;
@@ -45,21 +40,19 @@
 }
 
 .Link_header a + a{
-    margin-left: 1.5em;
-    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(255, 247, 0) 100%) repeat scroll 0% 0%;
+    background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(105, 104, 138) 0%, rgb(94, 112, 192) 100%) repeat scroll 0% 0%;
     padding: 0.5em 1.1em;
     border-radius:30px;
     color:#fff;
     font-weight: bold;
 }
-
+.Link_header a:hover {
+    opacity:0.5;
+}
 .list {
     display: flex;
     list-style: none;
     align-items: center;
-    border-bottom: 3px solid orange;
-    margin-bottom:10px
-
 }
 
 .listItem {
@@ -69,23 +62,10 @@
 .listItem a {
     color:#222;
     text-decoration: none;
-    padding: 0.3em 0.5em;
+    padding: 0 0.5em;
     display: inline-block;
-    transition: 1s;
-    margin:0 5px;
+}
+.listItem a:hover {
+    border-bottom:2px solid red
 }
 
-.menu{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu li{
-   padding: 0 0.5em ;
-}
-.ul{
-   
-    display:none;
-}

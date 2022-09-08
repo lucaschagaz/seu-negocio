@@ -1,20 +1,20 @@
-.pagination-container {
+.pagination-container {    
     display: flex;
     list-style-type: none;
     align-items:center;
-    justify-content:space-around;
+    justify-content:space-evenly;
     margin: 30px auto;
     width:50%;
-
+    padding:0.5em;
 }
 .pagination-item {
-      background-color:#fff;  
-      /* border: 2px solid #222; */
+        
+      border:2px solid #fff;    
       padding: 10px;
       height: 30px;
       text-align: center;
       margin: 0 5px;
-      color: #222;
+      color: #fff;
       display: flex;
       box-sizing: border-box;
       align-items: center;
@@ -23,13 +23,13 @@
       
 }
 .pagination-item .dots:hover {
-        color:#fff;
-        background-color: red;
-        cursor: default;
+        color:#222;
+        background-color: #fff;
+        cursor: pointer;
 }
 .pagination-item:hover {
-        color:#fff;
-        background-color: red;
+        color:#222;
+        background-color: #fff;
         cursor: pointer;
 }
   

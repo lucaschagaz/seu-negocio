@@ -29,7 +29,7 @@ function FormUser({handleSubmit, btnText}){
                 ></Input>
                 <Input
                     type="password" 
-                    text="Senha (no minimo 8 caracteres)"
+                    text="Senha:"
                     name="password" 
                     value={password}
                     placeholder="Digite uma senha!" 

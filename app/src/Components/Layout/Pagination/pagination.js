@@ -36,12 +36,12 @@ const Pagination = props => {
       { currentPage === 1 ? <li
         className={'pagination-item'}
       >
-        PREVIUS        
+        -       
       </li> : <li
         className={'pagination-item'}
         onClick={onPrevious}
       >
-        PREVIUS
+        -
       </li>
       } 
 
@@ -64,12 +64,12 @@ const Pagination = props => {
         className={'pagination-item'}
        
       >
-        NEXT
+        +
       </li> : <li
         className={'pagination-item'}
         onClick={onNext}
       >
-        NEXT
+        +
       </li>
       }
       

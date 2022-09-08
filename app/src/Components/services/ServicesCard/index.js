@@ -21,9 +21,6 @@ function ServiceCard({name, cost, description, id, handleRemove}){
                 <span>Descricao: </span> {description}
             </p>
             <div className={styles.project_card_actions}>
-                {/* <Link to={`/SingleProject/${id}`}>
-                    <BsPencil></BsPencil>Editar
-                </Link> */}
                 <button onClick={remove}>
                     <BsFillTrashFill></BsFillTrashFill>Remover
                 </button>
